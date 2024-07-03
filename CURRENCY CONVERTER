@@ -1,0 +1,57 @@
+import java.util.Scanner;
+ class  Currency {
+    public  static  void main(String[] args){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("this is currency converter");
+        System.out.println("1 Rupee to USD");
+        System.out.println("2 USD to Rupee");
+        System.out.println("3 Euro to Rupee");
+        System.out.println("4 Rupee to Euro ");
+        System.out.println("enter your choice between 1 to 4");
+        int choice =scanner.nextInt();
+        {
+            if(choice==1) {
+                System.out.println("enter amount in rupee");
+                double Rupee = scanner.nextDouble();
+                double USD = Rupeetousd(Rupee);
+                System.out.println("converted into USD:" + USD);
+            }
+            else if(choice==2) {
+                System.out.println("enter amount in usd");
+                double USD = scanner.nextDouble();
+                double Rupee = usdtoRupee(USD);
+                System.out.println("converted into Rupee:" + Rupee);
+            }
+
+            else if(choice==3) {
+                System.out.println("enter amount in EURO");
+                double EURO = scanner.nextDouble();
+                double Rupee = eurotoRupee(EURO);
+                System.out.println("converted into in USD:" + Rupee);
+            }
+            else if(choice==4) {
+                System.out.println("enter amount in Rupee: ");
+                double Rupee = scanner.nextDouble();
+                double EURO = RupeetoEuro(Rupee);
+                System.out.println("converted into in USD:" + EURO);
+            }
+            else {
+                System.out.println("invalid choice.please select from 1 to 4 ");
+            }
+        }
+        scanner.close();
+
+    }
+    public  static double Rupeetousd(double Rupee){
+        return Rupee *4.0;
+    }
+    public  static double usdtoRupee(double USD){
+        return USD *86.44;
+    }
+    public  static double eurotoRupee(double EURO){
+        return EURO *89.14;
+    }
+    public  static double RupeetoEuro(double Rupee){
+        return Rupee *90.44;
+    }
+}
