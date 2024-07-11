@@ -1,0 +1,41 @@
+import java.util.Scanner;
+class GradeCalculator {
+    public static void main(String[] args) {
+        int maths=65;
+        int chemistry=60;
+        int science=88;
+        int history=99;
+        int english=40;
+        int kannada=55;
+        int Totalmarks=maths+chemistry+science+history+english+kannada;
+        int Totalsubject=6;
+        double a=(double)Totalmarks/Totalsubject;
+        String grade;
+        if(a>=90)
+        {
+            grade="A+";
+        }
+        else if(a>=80)
+        {
+            grade="A";
+        }
+        else if(a>=70)
+        {
+            grade="B";
+        }
+        else if(a>=60)
+        {
+            grade="C";
+        }
+        else if(a>=50)
+        {
+            grade="D";
+        }
+        else{
+            grade="F";
+        }
+        System.out.println("Totalmarks:"+Totalmarks);
+        System.out.println("Averagepercentage:"+a+"%");
+         System.out.println("grade:"+grade);
+    }
+}
